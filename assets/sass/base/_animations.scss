@@ -1,0 +1,20 @@
+@keyframes fadein {
+    0% { opacity: 0; }
+    25% { opacity:0.25; }
+    50% { opacity: 0.5; }
+    75% { opacity: 0.75; }
+    100% { opacity: 1; }
+}
+@keyframes sunshine {
+    0% { fill: #f5c525;}
+    50% { fill: #ebc080;}
+    100% { fill: #f5c525 }
+}
+@keyframes sunburn {
+    0% { fill: ; }
+    20% { fill: ; }
+    40% { fill: ; }
+    60% { fill: ; }
+    80% { fill: ; }
+    100% { fill: ; }
+}
