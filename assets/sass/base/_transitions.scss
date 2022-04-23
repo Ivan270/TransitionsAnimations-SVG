@@ -1,0 +1,36 @@
+/* Transitions */
+.beach__people-sunburn{
+    transition: fill 3s linear;
+    &:hover {
+        fill: #da4e4e;
+    }
+}
+.beach__title{
+    transition: font-size 1s ease-out, color 2s ease-out;
+    &:hover {
+        font-size: 3rem;
+        color: #f5c525;
+    }
+}
+.beach__text { 
+    text-align: left;
+    transition: background-color 2s linear, border 4s ease-out, border-radius 4s linear 2s, margin-left 4s ease;
+    &:hover {
+        background-color: black;
+        border: 2px solid black;
+        border-radius: 30px;
+        margin-left: 38%;
+    }
+}
+.beach_palm-tree-coconut2 {
+    transition: cy 0.1s linear;
+    &:hover {
+        cy: 55;
+    }
+}
+.beach__people-flower-shadow {
+    transition: fill 3s ease;
+    &:hover {
+        fill: #8f7722;
+    }
+}

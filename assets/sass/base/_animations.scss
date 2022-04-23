@@ -1,3 +1,4 @@
+/* Animations */
 @keyframes fadein {
     0% { opacity: 0; }
     25% { opacity:0.25; }
@@ -10,11 +11,20 @@
     50% { fill: #ebc080;}
     100% { fill: #f5c525 }
 }
-@keyframes sunburn {
-    0% { fill: ; }
-    20% { fill: ; }
-    40% { fill: ; }
-    60% { fill: ; }
-    80% { fill: ; }
-    100% { fill: ; }
+@keyframes rolling-ball {
+    from { transform:rotate(0deg) }
+    to { transform:rotate(360deg) }
+}
+@keyframes desplazamiento {
+    from { left: 0px; }
+    to { left: 1000px; } 
+}
+
+@keyframes swing {
+    15% { transform: translateY(5px); }
+    30% { transform: translateY(-5px); } 
+    50% { transform: translateY(3px); }
+    65% { transform: translateY(-3px); }
+    80% { transform: translateY(2px); }
+    100% { transform: translateY(0); }
 }

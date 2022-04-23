@@ -1,18 +1,201 @@
-/* Error: Expected expression.
- *    ,
- * 14 |     0% { fill: ; }
- *    |                ^
- *    '
- *   assets\sass\base\_animations.scss 14:16  @import
- *   assets\sass\main.scss 5:9                root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 14 \2502      0% { fill: ; }\d\a    \2502                 ^\a    \2575 \a   assets\\sass\\base\\_animations.scss 14:16  @import\a   assets\\sass\\main.scss 5:9                root stylesheet";
+/* Animations */
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+@keyframes sunshine {
+  0% {
+    fill: #f5c525;
+  }
+  50% {
+    fill: #ebc080;
+  }
+  100% {
+    fill: #f5c525;
+  }
+}
+@keyframes rolling-ball {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes desplazamiento {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 1000px;
+  }
+}
+@keyframes swing {
+  15% {
+    transform: translateY(5px);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  65% {
+    transform: translateY(-3px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Transitions */
+.beach__people-sunburn {
+  transition: fill 3s linear;
+}
+.beach__people-sunburn:hover {
+  fill: #da4e4e;
+}
+
+.beach__title {
+  transition: font-size 1s ease-out, color 2s ease-out;
+}
+.beach__title:hover {
+  font-size: 3rem;
+  color: #f5c525;
+}
+
+.beach__text {
+  text-align: left;
+  transition: background-color 2s linear, border 4s ease-out, border-radius 4s linear 2s, margin-left 4s ease;
+}
+.beach__text:hover {
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 30px;
+  margin-left: 38%;
+}
+
+.beach_palm-tree-coconut2 {
+  transition: cy 0.1s linear;
+}
+.beach_palm-tree-coconut2:hover {
+  cy: 55;
+}
+
+.beach__people-flower-shadow {
+  transition: fill 3s ease;
+}
+.beach__people-flower-shadow:hover {
+  fill: #8f7722;
+}
+
+body {
+  margin: 0;
+}
+
+.beach {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.beach__sky {
+  align-items: center;
+  background-color: #61c1e8;
+  display: inherit;
+  flex-direction: column;
+  flex-grow: 4;
+  justify-content: flex-start;
+  padding: 20px 150px 0;
+}
+
+.beach__sun-whole {
+  animation: fadein 3s linear 0s 1;
+}
+.beach__sun-rays {
+  animation: sunshine 1s linear 3s infinite;
+}
+
+.beach__sun,
+.beach__content {
+  -webkit-animation: showContent 2s linear;
+  -moz-animation: showContent 2s linear;
+  -o-animation: showContent 2s linear;
+  animation: showContent 2s linear;
+  width: 100%;
+}
+
+.beach__content {
+  color: #fff;
+  font-family: monospace;
+}
+
+.beach__title {
+  font-size: 2rem;
+  color: #FFF;
+}
+
+.beach__text {
+  font-size: 1rem;
+}
+
+.beach__sand {
+  align-items: flex-end;
+  background-color: #f1edd9;
+  display: inherit;
+  flex-grow: 1;
+  justify-content: flex-end;
+  padding: 0 300px;
+  position: relative;
+}
+
+.beach__sun-umbrella {
+  animation: moveToRight 1s linear;
+  left: 100px;
+  position: absolute;
+  top: 20px;
+}
+.beach__sun-umbrella:hover {
+  animation: swing 1s ease infinite;
+}
+
+.beach_palm-tree {
+  animation: showContent 2s linear;
+  left: 55%;
+  position: absolute;
+  top: -100px;
+  z-index: 8;
+}
+
+.beach__people {
+  display: inline;
+}
+
+.beach__ball {
+  animation: moveToLeft 1s linear;
+  bottom: 102px;
+  position: absolute;
+  right: 180px;
+}
+.beach__ball-group {
+  position: relative;
+  animation: rolling-ball 1s linear 1s infinite, desplazamiento 10s linear 1s 1 forwards;
+}
+
+/*# sourceMappingURL=style.css.map */

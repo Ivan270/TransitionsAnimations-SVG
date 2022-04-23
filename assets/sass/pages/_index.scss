@@ -20,12 +20,12 @@ body {
 }
 
 .beach__sun {
-&-whole {
-    animation: fadein 3s linear 0s 1 
-}
-&-rays {
-    animation: sunshine 1s linear 3s infinite;
-}
+    &-whole {
+        animation: fadein 3s linear 0s 1 
+    }
+    &-rays {
+        animation: sunshine 1s linear 3s infinite;
+    }
 }
 .beach__sun,
 .beach__content {
@@ -43,6 +43,7 @@ body {
 
 .beach__title {
     font-size: 2rem;
+    color: #FFF;
 }
 
 .beach__text {
@@ -64,6 +65,10 @@ body {
     left: 100px;
     position: absolute;
     top: 20px;
+    &:hover{
+        animation: swing 1s ease infinite;
+    }
+
 }
 
 .beach_palm-tree {
@@ -83,4 +88,10 @@ body {
     bottom: 102px;
     position: absolute;
     right: 180px;
+    
+    &-group {
+        position: relative;
+        animation: rolling-ball 1s linear 1s infinite, desplazamiento 10s linear 1s 1 forwards;
+        
+    }
 }
